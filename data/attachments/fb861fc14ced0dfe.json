@@ -1,8 +1,10 @@
 {
     "Accept": "application/json",
+    "x-api-key": "reqres-free-v1",
+    "Authorization": "Bearer {{authToken}}",
     "User-Agent": "PostmanRuntime/7.39.1",
     "Cache-Control": "no-cache",
-    "Postman-Token": "5ea230bb-b8cf-493e-b3bd-da81f41fd42d",
+    "Postman-Token": "a94a82e6-3515-4006-82b0-468f6a128a21",
     "Host": "reqres.in",
     "Accept-Encoding": "gzip, deflate, br",
     "Connection": "keep-alive"
