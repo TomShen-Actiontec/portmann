@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","43","List users","Reqres API Demo","Fri Sep 12 12:13:46 UTC 2025","passed","Fri Sep 12 12:13:46 UTC 2025","","","",""
+"","30","usersWithToken","Reqres API Demo","Fri Sep 12 12:13:47 UTC 2025","passed","Fri Sep 12 12:13:47 UTC 2025","Login and List Users","Integration Tests","",""
+"","120","defaultLogin","Reqres API Demo","Fri Sep 12 12:13:46 UTC 2025","passed","Fri Sep 12 12:13:47 UTC 2025","Login and List Users","Integration Tests","",""
+"","226","User login","Reqres API Demo","Fri Sep 12 12:13:46 UTC 2025","passed","Fri Sep 12 12:13:46 UTC 2025","","","",""
