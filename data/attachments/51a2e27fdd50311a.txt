@@ -1,4 +1,0 @@
-{
-  "email": "Ut qui tempor irure",
-  "password": "do se"
-}
