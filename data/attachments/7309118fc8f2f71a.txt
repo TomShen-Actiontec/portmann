@@ -1,7 +1,0 @@
-{
-  "id": -77393494,
-  "email": "LmRUNM@iFnEwiVkMhNjowbkDWhQcjoCByOmbYf.oz",
-  "first_name": "sed eiusmod ex et proident",
-  "last_name": "aute Excepteur",
-  "avatar": "https://NwfTuTIjIscbCJHyJCyBsBIdAXnY.vtekQrzl8HVyLdPUR-,hDlEsCV9NXF5HL.HxWuSmZMdW,lU"
-}

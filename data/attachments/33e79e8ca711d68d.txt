@@ -1,0 +1,1 @@
+level: log, messages: INFO - Unable to assign variable {{authToken}}, as jsonData.token is undefined.

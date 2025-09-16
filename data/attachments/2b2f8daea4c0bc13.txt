@@ -1,7 +1,0 @@
-{
-  "id": -53737191,
-  "name": "pariatur laboris adipisicing",
-  "description": "ut ad eu proident minim",
-  "price": -38215250.54379347,
-  "in_stock": true
-}
