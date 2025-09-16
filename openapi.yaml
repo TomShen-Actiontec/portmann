@@ -1,42 +1,31 @@
 openapi: 3.0.0
 info:
-  title: Reqres API Demo
+  title: Portmann API
+  description: Extended OpenAPI spec with additional reqres-style paths.
   version: 1.0.0
 servers:
   - url: https://reqres.in/api
 paths:
-  /login:
-    post:
-      operationId: login
-      summary: User login
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: string
-                password:
-                  type: string
+  /ping:
+    get:
+      summary: Health check endpoint
       responses:
-        '200':
-          description: successful login
+        "200":
+          description: Successful response
           content:
             application/json:
               schema:
                 type: object
                 properties:
-                  token:
+                  status:
                     type: string
+
   /users:
     get:
-      operationId: listUsers
-      summary: List users
+      summary: Get list of users
       responses:
-        '200':
-          description: successful request
+        "200":
+          description: A list of users
           content:
             application/json:
               schema:
@@ -45,16 +34,69 @@ paths:
                   data:
                     type: array
                     items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                        email:
-                          type: string
-  /register:
+                      $ref: "#/components/schemas/User"
     post:
-      operationId: register
-      summary: Register user
+      summary: Create new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        "201":
+          description: User created
+
+  /users/{userId}:
+    get:
+      summary: Get single user by ID
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: A single user
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "404":
+          description: User not found
+    put:
+      summary: Update user by ID
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        "200":
+          description: User updated
+    delete:
+      summary: Delete user by ID
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: User deleted
+
+  /login:
+    post:
+      summary: Login user
       requestBody:
         required: true
         content:
@@ -64,11 +106,40 @@ paths:
               properties:
                 email:
                   type: string
+                  format: email
                 password:
                   type: string
       responses:
-        '200':
-          description: user registered
+        "200":
+          description: Authentication token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+        "400":
+          description: Invalid credentials
+
+  /register:
+    post:
+      summary: Register a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+      responses:
+        "200":
+          description: Registration successful
           content:
             application/json:
               schema:
@@ -78,4 +149,108 @@ paths:
                     type: integer
                   token:
                     type: string
+        "400":
+          description: Missing fields
 
+  /products:
+    get:
+      summary: Get list of products
+      responses:
+        "200":
+          description: A list of products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+    post:
+      summary: Create a new product
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Product"
+      responses:
+        "201":
+          description: Product created
+
+  /products/{productId}:
+    get:
+      summary: Get single product by ID
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: A single product
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+        "404":
+          description: Product not found
+    put:
+      summary: Update product by ID
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Product"
+      responses:
+        "200":
+          description: Product updated
+    delete:
+      summary: Delete product by ID
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Product deleted
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        email:
+          type: string
+          format: email
+        first_name:
+          type: string
+        last_name:
+          type: string
+        avatar:
+          type: string
+          format: uri
+    Product:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+        price:
+          type: number
+          format: float
+        in_stock:
+          type: boolean
