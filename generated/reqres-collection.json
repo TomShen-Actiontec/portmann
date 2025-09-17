@@ -1,501 +1,410 @@
 {
-  "_": {
-    "postman_id": "9211a440-517c-4ddb-9ad2-a90f6e46fbda"
-  },
-  "item": [
-    {
-      "id": "351d9543-db2d-4db5-b6bb-eafec4f21557",
-      "name": "User login",
-      "request": {
-        "name": "User login",
-        "description": {
-          "type": "text/plain"
-        },
-        "url": {
-          "path": [
-            "login"
-          ],
-          "host": [
-            "{{baseUrl}}"
-          ],
-          "query": [],
-          "variable": []
-        },
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          },
-          {
-            "key": "Accept",
-            "value": "application/json"
-          }
-        ],
-        "method": "POST",
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"email\": \"do dolore minim\",\n  \"password\": \"veniam\"\n}",
-          "options": {
-            "raw": {
-              "headerFamily": "json",
-              "language": "json"
-            }
-          }
-        }
-      },
-      "response": [
-        {
-          "_": {
-            "postman_previewlanguage": "json"
-          },
-          "id": "47f7438b-99ea-417d-9dd5-4a90b0126fb3",
-          "name": "successful login",
-          "originalRequest": {
-            "url": {
-              "path": [
-                "login"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"email\": \"do dolore minim\",\n  \"password\": \"veniam\"\n}",
-              "options": {
-                "raw": {
-                  "headerFamily": "json",
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "status": "OK",
-          "code": 200,
-          "header": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            }
-          ],
-          "body": "{\n  \"token\": \"consectetur\"\n}",
-          "cookie": []
-        }
-      ],
-      "event": [],
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      }
-    },
-    {
-      "id": "15acc3c0-2e78-478c-917d-99e5dc716060",
-      "name": "List users",
-      "request": {
-        "name": "List users",
-        "description": {
-          "type": "text/plain"
-        },
-        "url": {
-          "path": [
-            "users"
-          ],
-          "host": [
-            "{{baseUrl}}"
-          ],
-          "query": [],
-          "variable": []
-        },
-        "header": [
-          {
-            "key": "Accept",
-            "value": "application/json"
-          }
-        ],
-        "method": "GET",
-        "body": {}
-      },
-      "response": [
-        {
-          "_": {
-            "postman_previewlanguage": "json"
-          },
-          "id": "6a134bea-08b7-4959-a298-d769e93ff772",
-          "name": "successful request",
-          "originalRequest": {
-            "url": {
-              "path": [
-                "users"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "body": {}
-          },
-          "status": "OK",
-          "code": 200,
-          "header": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            }
-          ],
-          "body": "{\n  \"data\": [\n    {\n      \"id\": 89754821,\n      \"email\": \"veniam in dolore elit\"\n    },\n    {\n      \"id\": -559194,\n      \"email\": \"dolor occaecat nostrud magna\"\n    }\n  ]\n}",
-          "cookie": []
-        }
-      ],
-      "event": [],
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      }
-    },
-    {
-      "id": "83626de4-3828-460c-bb41-3d4914e0f3e2",
-      "name": "Register user",
-      "request": {
-        "name": "Register user",
-        "description": {
-          "type": "text/plain"
-        },
-        "url": {
-          "path": [
-            "register"
-          ],
-          "host": [
-            "{{baseUrl}}"
-          ],
-          "query": [],
-          "variable": []
-        },
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          },
-          {
-            "key": "Accept",
-            "value": "application/json"
-          }
-        ],
-        "method": "POST",
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"email\": \"do dolore minim\",\n  \"password\": \"veniam\"\n}",
-          "options": {
-            "raw": {
-              "headerFamily": "json",
-              "language": "json"
-            }
-          }
-        }
-      },
-      "response": [
-        {
-          "_": {
-            "postman_previewlanguage": "json"
-          },
-          "id": "df259ef0-141f-4d1b-8ae1-5cb5e42207f3",
-          "name": "user registered",
-          "originalRequest": {
-            "url": {
-              "path": [
-                "register"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"email\": \"do dolore minim\",\n  \"password\": \"veniam\"\n}",
-              "options": {
-                "raw": {
-                  "headerFamily": "json",
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "status": "OK",
-          "code": 200,
-          "header": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            }
-          ],
-          "body": "{\n  \"id\": -19505305,\n  \"token\": \"ad labore\"\n}",
-          "cookie": []
-        }
-      ],
-      "event": [],
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      }
-    },
-    {
-      "id": "7d3c21de-3dfa-43b3-95f2-bbde738f7a45",
-      "name": "Integration Tests",
-      "item": [
-        {
-          "id": "9dc4bcd6-d744-40cc-8b66-e24499e772ef",
-          "name": "Login and List Users",
-          "item": [
-            {
-              "id": "4e8b970c-5e1e-43a7-bcba-3a27157d365c",
-              "name": "defaultLogin",
-              "request": {
-                "name": "defaultLogin",
-                "description": {
-                  "type": "text/plain"
-                },
-                "url": {
-                  "path": [
-                    "login"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"email\": \"do dolore minim\",\n  \"password\": \"veniam\"\n}",
-                  "options": {
-                    "raw": {
-                      "headerFamily": "json",
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "response": [
-                {
-                  "id": "1f9617bc-2007-4b61-997f-d5abbebd28be",
-                  "name": "successful login",
-                  "originalRequest": {
-                    "url": {
-                      "path": [
-                        "login"
-                      ],
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "query": [],
-                      "variable": []
-                    },
-                    "header": [
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      },
-                      {
-                        "key": "Accept",
-                        "value": "application/json"
-                      }
-                    ],
-                    "method": "POST",
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n  \"email\": \"do dolore minim\",\n  \"password\": \"veniam\"\n}",
-                      "options": {
-                        "raw": {
-                          "headerFamily": "json",
-                          "language": "json"
-                        }
-                      }
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "header": [
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": "{\n  \"token\": \"consectetur\"\n}",
-                  "cookie": []
-                }
-              ],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "a404ec84-ba4b-4f3d-bc1d-8173cc6a52c7",
-                    "type": "text/javascript",
-                    "exec": [
-                      "// Set response object as internal variable\nlet jsonData = {};\ntry {jsonData = pm.response.json();}catch(e){}\n",
-                      "// Set property value as variable\nconst _resToken = jsonData?.token;\n",
-                      "// pm.collectionVariables - Set authToken as variable for jsonData.token\nif (_resToken !== undefined) {\n   pm.collectionVariables.set(\"authToken\", jsonData.token);\n   console.log(\"- use {{authToken}} as collection variable for value\",jsonData.token);\n} else {\n   console.log('INFO - Unable to assign variable {{authToken}}, as jsonData.token is undefined.');\n};\n"
-                    ]
-                  }
-                }
-              ],
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              }
-            },
-            {
-              "id": "691e0b10-e89b-450c-be11-0ed8d93f5a9f",
-              "name": "usersWithToken",
-              "request": {
-                "name": "usersWithToken",
-                "description": {
-                  "type": "text/plain"
-                },
-                "url": {
-                  "path": [
-                    "users"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  },
-                  {
-                    "disabled": false,
-                    "key": "x-api-key",
-                    "value": "reqres-free-v1"
-                  },
-                  {
-                    "disabled": false,
-                    "key": "Authorization",
-                    "value": "Bearer {{authToken}}"
-                  }
-                ],
-                "method": "GET",
-                "body": {},
-                "auth": {
-                  "type": "noauth",
-                  "noauth": []
-                }
-              },
-              "response": [
-                {
-                  "id": "f2fd8545-3b7c-4dbc-800b-47e7d81cee7d",
-                  "name": "successful request",
-                  "originalRequest": {
-                    "url": {
-                      "path": [
-                        "users"
-                      ],
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "query": [],
-                      "variable": []
-                    },
-                    "header": [
-                      {
-                        "key": "Accept",
-                        "value": "application/json"
-                      }
-                    ],
-                    "method": "GET",
-                    "body": {}
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "header": [
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": "{\n  \"data\": [\n    {\n      \"id\": 89754821,\n      \"email\": \"veniam in dolore elit\"\n    },\n    {\n      \"id\": -559194,\n      \"email\": \"dolor occaecat nostrud magna\"\n    }\n  ]\n}",
-                  "cookie": []
-                }
-              ],
-              "event": [],
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              }
-            }
-          ],
-          "event": []
-        }
-      ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "type": "any",
-      "value": "https://reqres.in/api",
-      "key": "baseUrl"
-    }
-  ],
-  "info": {
-    "_postman_id": "9211a440-517c-4ddb-9ad2-a90f6e46fbda",
-    "name": "Reqres API Demo",
-    "version": {
-      "raw": "1.0.0",
-      "major": 1,
-      "minor": 0,
-      "patch": 0,
-      "prerelease": [],
-      "build": [],
-      "string": "1.0.0"
-    },
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "",
-      "type": "text/plain"
-    }
-  }
+	"info": {
+		"_postman_id": "05632c34-4239-4eb2-952b-0038b70ad25f",
+		"name": "Reqres API Demo Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48126265"
+	},
+	"item": [
+		{
+			"name": "Integration Tests",
+			"item": [
+				{
+					"name": "Login and List Users",
+					"item": [
+						{
+							"name": "defaultLogin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"// Set response object as internal variable\nlet jsonData = {};\ntry {jsonData = pm.response.json();}catch(e){}\n",
+											"// Set property value as variable\nconst _resToken = jsonData?.token;\n",
+											"// pm.collectionVariables - Set authToken as variable for jsonData.token\nif (_resToken !== undefined) {\n   pm.collectionVariables.set(\"authToken\", jsonData.token);\n   console.log(\"- use {{authToken}} as collection variable for value\",jsonData.token);\n} else {\n   console.log('INFO - Unable to assign variable {{authToken}}, as jsonData.token is undefined.');\n};\n"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"do dolore minim\",\n  \"password\": \"veniam\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "successful login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"do dolore minim\",\n  \"password\": \"veniam\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"token\": \"consectetur\"\n}"
+								}
+							]
+						},
+						{
+							"name": "usersWithToken",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "x-api-key",
+										"value": "reqres-free-v1"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{authToken}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "successful request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": [\n    {\n      \"id\": 89754821,\n      \"email\": \"veniam in dolore elit\"\n    },\n    {\n      \"id\": -559194,\n      \"email\": \"dolor occaecat nostrud magna\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "List users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/users",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successful request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"data\": [\n    {\n      \"id\": 89754821,\n      \"email\": \"veniam in dolore elit\"\n    },\n    {\n      \"id\": -559194,\n      \"email\": \"dolor occaecat nostrud magna\"\n    }\n  ]\n}"
+				}
+			]
+		},
+		{
+			"name": "User login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"do dolore minim\",\n  \"password\": \"veniam\"\n}",
+					"options": {
+						"raw": {
+							"headerFamily": "json",
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successful login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"do dolore minim\",\n  \"password\": \"veniam\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"token\": \"consectetur\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"do dolore minim\",\n  \"password\": \"veniam\"\n}",
+					"options": {
+						"raw": {
+							"headerFamily": "json",
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user registered",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"do dolore minim\",\n  \"password\": \"veniam\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"id\": -19505305,\n  \"token\": \"ad labore\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://reqres.in/api",
+			"type": "any"
+		}
+	]
 }
